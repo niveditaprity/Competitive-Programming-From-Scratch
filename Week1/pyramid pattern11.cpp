@@ -24,3 +24,8 @@ int main() {
     }
 	return 0;
 }
+/*  A
+   BAB
+  CBABC
+ DCBABCD
+EDCBABCDE  */
