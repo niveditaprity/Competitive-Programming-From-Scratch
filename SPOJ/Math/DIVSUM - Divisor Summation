@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+ll divisorsum(ll n)
+{
+  ll sum=1;
+  for(int i=2;i<=sqrt(n);i++)
+  {
+    if(n%i==0)
+    {
+        if(n/i==i)
+        {
+            sum+=i;
+        }
+        else
+        {
+        sum+=i+(n/i);
+        }
+    }
+  }
+  return sum;
+}
+
+
+
+int main() {
+	ll t;
+	cin>>t;
+	while(t--)
+	{
+	    ll n;
+	    cin>>n;
+	    if(n==1)
+	    {
+	        cout<<0<<"\n";
+	    }
+	    else{
+	    cout<<divisorsum(n)<<"\n";
+	    }
+	}
+	return 0;
+}
