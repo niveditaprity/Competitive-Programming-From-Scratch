@@ -11,7 +11,7 @@ int main() {
         vector<ll>factorisation;
         for(ll i=2;i*i<=n;i++)
         {
-            if(n%i==0)
+            while(n%i==0)
             {
                 factorisation.push_back(i);
                 n=n/i;
